@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{53726285-39D8-440A-81D6-BEBA65C60239}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UrhoGame.iOS</RootNamespace>
+    <AssemblyName>UrhoHameiOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <PlatformTarget>
+    </PlatformTarget>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <AssemblyName>UrhoGameiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <GenerateTailCalls>true</GenerateTailCalls>
+    <PlatformTarget>
+    </PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <GenerateTailCalls>true</GenerateTailCalls>
+    <PlatformTarget>
+    </PlatformTarget>
+    <AssemblyName>UrhoGameiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <PlatformTarget>
+    </PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" />
+  <Import Project="..\packages\UrhoSharp.1.0.410\build\Xamarin.iOS10\UrhoSharp.targets" Condition="Exists('..\packages\UrhoSharp.1.0.410\build\Xamarin.iOS10\UrhoSharp.targets')" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="application/json" />
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain" />
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-fsharp" />
+          <FSharpFormattingPolicy scope="text/x-fsharp">
+            <DefaultFormat IndentOnTryWith="False" ReorderOpenDeclaration="False" SpaceAfterComma="True" SpaceAfterSemicolon="True" SpaceAroundDelimiter="True" SpaceBeforeArgument="True" SpaceBeforeColon="True" />
+          </FSharpFormattingPolicy>
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="UrhoSharpReadme.txt" />
+    <None Include="packages.config" />
+    <Compile Include="ViewController.fs" />
+    <Compile Include="AppDelegate.fs" />
+    <Compile Include="Main.fs" />
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\Ball.png">
+      <Link>Resources\Data\Urho2D\Ball.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\blue.png">
+      <Link>Resources\Data\Urho2D\blue.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\brown.png">
+      <Link>Resources\Data\Urho2D\brown.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\gold.png">
+      <Link>Resources\Data\Urho2D\gold.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\green.png">
+      <Link>Resources\Data\Urho2D\green.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\purple.png">
+      <Link>Resources\Data\Urho2D\purple.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\UrhoGame.Lib\Data\Urho2D\red.png">
+      <Link>Resources\Data\Urho2D\red.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Urho">
+      <HintPath>..\packages\UrhoSharp.1.0.410\lib\Xamarin.iOS10\Urho.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\UrhoGame.Lib\UrhoGame.Lib.fsproj">
+      <Project>{BDC9D5C6-9BE6-4F97-B9F2-0ECE0A44202A}</Project>
+      <Name>UrhoGame.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
